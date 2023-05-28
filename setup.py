@@ -17,6 +17,7 @@ setup(
     "Prompt Engineering"
   ],
   install_requires=[
+    'python-dotenv',
     'guidance',
     'openai',
     'transformers'

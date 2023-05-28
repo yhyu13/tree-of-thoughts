@@ -149,7 +149,7 @@ class OpenAILanguageModel(AbstractLanguageModel):
         elif self.evaluation_strategy == 'vote':
             states_text = '\n'.join([' '.join(state) for state in states])
 
-            prompt = f"Given the following states of reasoning, vote for the best state utilizing an scalar value 1-10:\n{states_text}\n\nVote, on the probability of this state of reasoning achieveing {inital_prompt} and become very pessimistic very NOTHING ELSE"
+            prompt = f"Given the following states of reasoning, vote for the best state utilizing an scalar value 1-10:\n{states_text}\n\nVote, on the probability of this state of reasoning achieveing {inital_prompt} and become very pessimistic and NOTHING ELSE"
 
             response = self.openai_api_call_handler(prompt, 50, 1)
 
